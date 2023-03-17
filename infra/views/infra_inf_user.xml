@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!--    <record model="ir.ui.view" id="res_partner_form_inherit">-->
+<!--    <record id="res_partner_form_inherit" model="ir.ui.view">-->
+<!--    <field name="name">res.partner.form.inherit</field>-->
+<!--    <field name="model">res.partner</field>-->
+<!--    <field name="inherit_id" ref="base.view_partner_form"/>-->
+<!--    <field name="arch" type="xml">-->
+<!--        <xpath expr="//div[@name='contact']" position="after">-->
+<!--            <div class="oe_title">-->
+<!--                <h6>Additional Information</h6>-->
+<!--            </div>-->
+<!--            <field name="preferred_language"/>-->
+<!--        </xpath>-->
+<!--    </field>-->
+<!--    </record>&ndash;&gt;-->
+    <record id="view_res_partner_form_inherit" model="ir.ui.view">
+<!--        <field name="name">"DRS Company Custom Fields"</field>-->
+        <field name="model">res.partner</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <field name="lang" position="after">
+                <field name="translate_name" string="translate_name"/>
+            </field>
+        </field>
+    </record>
+</odoo>
